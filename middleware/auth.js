@@ -5,7 +5,7 @@ const User = require("../models/userModel");
 
 // For allowing only logged in users to do some tasks.
 exports.isAuthenticatedUser = catchAsyncErrors(async(req,res,next)=>{
-    const {token} = req.cookies;
+    const {token} = await req.cookies.token;
     if(!token){
         return next(new ErrorHandler("Please login again to access this resource.",401));
     }
