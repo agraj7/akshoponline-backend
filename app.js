@@ -14,7 +14,7 @@ dotenv.config({path:"config/config.env"})
   
   app.use(
     cors({
-      origin:"https://shop-online-lake.vercel.app",
+      origin:"https://akshoponline-frontend.vercel.app",
       credentials: true,
     })
   );
